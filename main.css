@@ -1,0 +1,82 @@
+body {
+    margin: 30px;
+    padding: 0;
+    font-family: Open Sans, sans-serif;
+    font-size: 14px;
+}
+table {
+    width: 600px;
+    border: 1px solid #888888;
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid #888888;
+    padding: 5px;
+}
+.edit, .delete {
+    cursor: pointer;
+    padding: 2px;
+}
+.ticket__add_form, .ticket__edit_form {
+    display: none;
+}
+.ticket__add_form_active, .ticket__edit_form_active{
+    display: flex;
+    width: 300px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid black;
+    z-index: 999;
+}
+.ticket__add_input, .ticket__edit_input {
+    width: 100%;
+    padding: 5px;
+    margin: 10px 0;
+}
+.ticket__add_submit, .ticket__edit_submit {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgb(60, 148, 60);
+    color: white;
+    border: 0;
+}
+.ticket__add_cancel, .ticket__edit_cancel {
+    padding: 10px;
+    margin-right: 10px;
+    background-color: rgb(118, 116, 115);
+    color: white;
+    border: 0;
+}
+.hidden {
+    display: none;
+}
+.edit_field {
+    text-align: center;
+}
+/*====*/
+.button-add {
+    width: 65px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #b9b7b7;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.check {
+    width: 20px;
+    height: 16px;
+    border: 1px solid #b9b7b7;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 4px;
+}
+.ticket-descr {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
