@@ -11,8 +11,7 @@ export default class HelpDesk {
     // set urls to the server
     if (process.env.NODE_ENV === 'development') {
       this.urlServer = 'http://localhost:3000/';
-    }
-    else {
+    } else {
       this.urlServer = 'https://ahj-homeworks-http-backend.onrender.com/';
     }
 
@@ -31,7 +30,7 @@ export default class HelpDesk {
     this.onEditSubmit = this.onEditSubmit.bind(this);
     this.onClickProduct = this.onClickProduct.bind(this);
 
-    this.ticketService = new TicketService();
+    this.ticketService = new TicketService(this.urlServer);
     this.ticketView = new TicketView();
   }
 

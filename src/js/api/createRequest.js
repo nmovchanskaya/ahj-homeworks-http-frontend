@@ -1,5 +1,5 @@
 const createRequest = async (options = {
-  sendMethod, method, id, data, callback,
+  url, sendMethod, method, id, data, callback,
 }) => {
   let strRequest = `${options.url}?method=${options.method}`;
   //let strRequest = `http://localhost:3000/?method=${options.method}`;

@@ -5,8 +5,13 @@ import createRequest from './api/createRequest';
  *  Содержит методы для отправки запросов на сервер и получения ответов
  * */
 export default class TicketService {
+  constructor(url) {
+    this.url = url;
+  }
+
   list(callback) {
     createRequest({
+      url: this.url,
       sendMethod: 'GET',
       method: 'allTickets',
       callback,
@@ -15,6 +20,7 @@ export default class TicketService {
 
   get(id, callback) {
     createRequest({
+      url: this.url,
       sendMethod: 'GET',
       method: 'ticketById',
       id,
@@ -24,6 +30,7 @@ export default class TicketService {
 
   create(data, callback) {
     createRequest({
+      url: this.url,
       sendMethod: 'POST',
       method: 'createTicket',
       data,
@@ -33,6 +40,7 @@ export default class TicketService {
 
   update(id, data, callback) {
     createRequest({
+      url: this.url,
       sendMethod: 'POST',
       method: 'updateById',
       id,
@@ -43,6 +51,7 @@ export default class TicketService {
 
   delete(id, callback) {
     createRequest({
+      url: this.url,
       sendMethod: 'GET',
       method: 'deleteById',
       id,
