@@ -8,6 +8,14 @@ import TicketEditForm from './TicketEditForm';
  * */
 export default class HelpDesk {
   constructor(container) {
+    // set urls to the server
+    if (process.env.NODE_ENV === 'development') {
+      this.urlServer = 'http://localhost:3000/';
+    }
+    else {
+      this.urlServer = 'https://ahj-homeworks-http-backend.onrender.com/';
+    }
+
     if (!(container instanceof HTMLElement)) {
       throw new Error('This is not HTML element!');
     }
